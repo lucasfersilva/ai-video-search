@@ -2,7 +2,7 @@ from google.cloud import storage
 from google.cloud.storage import Blob
 import os
 
-storage_client = storage.Client('even-research-392016')
+storage_client = storage.Client('BLOB-NAME')
 blobs = storage_client.list_blobs('videos_intelligence')
 
 
