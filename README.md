@@ -11,6 +11,9 @@ Front-end Simples porque sou preguiçoso e precisava que funcionasse.
 
 Tirei a ideia desse artigo - https://daleonai.com/building-an-ai-powered-searchable-video-archive
 
+Antes de tudo instale e faça a verificação do gcloud CLI
+https://cloud.google.com/sdk/gcloud
+
 Pesquisa:
 <img width="575" alt="CleanShot 2023-07-15 at 19 15 47@2x" src="https://github.com/lucasfersilva/ai-video-search/assets/37738836/ef51a95b-4310-4ab9-9cbf-7eb4270bbc56">
 
