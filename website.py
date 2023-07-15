@@ -4,9 +4,9 @@ from algoliasearch.search_client import SearchClient
 
 app = Flask(__name__)
 
-ALGOLIA_APP_ID = '5GGKFNVXJC'
-ALGOLIA_API_KEY = '5d2c468dbf811e8dde793c2d4bc2c7dd'
-ALGOLIA_INDEX_NAME = 'push_data'
+ALGOLIA_APP_ID = ''
+ALGOLIA_API_KEY = ''
+ALGOLIA_INDEX_NAME = ''
 
 client = SearchClient.create(ALGOLIA_APP_ID,ALGOLIA_API_KEY)
 
