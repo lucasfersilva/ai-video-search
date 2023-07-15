@@ -3,7 +3,7 @@ from typing import cast
 from google.cloud import videointelligence_v1 as vi
 from google.cloud import storage
 
-storage_client = storage.Client('even-research-392016')
+storage_client = storage.Client('BLOB-NAME')
 blobs = storage_client.list_blobs('videos_intelligence')
 
 
