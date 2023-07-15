@@ -24,8 +24,8 @@ for i in filenames:
         continue
     print(i)
     client = SearchClient.create(
-        '5GGKFNVXJC',
-        'c42b598a7e15c15dd4c24154b85c8f2a'
+        'APP-ID',
+        'CREDENTIAL'
     )
 
     video_intelligence = json.load(open(f'parsed_jsons/{i}'))
