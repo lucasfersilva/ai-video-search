@@ -5,13 +5,40 @@
 </head>
 <body>
     <h1>Search Results</h1>
-    <ul>
-        {% for hit in results['hits'] %}
-            <li>
-                <h3>{{ hit['title'] }}</h3>
-                <p>{{ hit['description'] }}</p>
-            </li>
+
+    {% if results.hits %}
+        {% for hit in results.hits %}
+            {% if hit.video_id %}
+                <video id="myVideo{{ loop.index }}" width="640" height="480" controls>
+
+
+                    <source src="{{ hit.video_id  }}" type="video/mp4">
+                    Your browser does not support the video tag.
+
+                </video>
+                    <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        // Get the video element by its ID
+                        var video = document.getElementById("myVideo{{ loop.index }}");
+
+                        // Get the seconds you want to start the video from (replace 5 with your desired seconds value)
+                        var startSeconds = {{ hit.start_seconds|default(0) }};
+
+                        // Wait for the video metadata to be loaded, then set the start time and play the video
+                        video.onloadedmetadata = function() {
+                            if (video.duration >= startSeconds) {
+                                video.currentTime = startSeconds;
+                            }
+                            video.play();
+                        };
+                    });
+                </script>
+    {% else %}
+                <p>No video URL found for this result.</p>
+            {% endif %}
         {% endfor %}
-    </ul>
+    {% else %}
+        <p>No videos found for the query.</p>
+    {% endif %}
 </body>
 </html>
